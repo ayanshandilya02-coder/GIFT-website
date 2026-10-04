@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Stitch & Space Institute — Fashion & Interior Design School</title>
+<meta name="description" content="Stitch & Space Institute trains the next generation of fashion and interior designers through studio-based courses, industry mentorship, and hands-on portfolio work.">
+<meta name="keywords" content="fashion design institute, interior design school, design courses, fashion designing course, interior designing course, admissions">
+<meta name="author" content="Stitch & Space Institute">
+<link rel="canonical" href="https://www.stitchandspace.edu/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stitch & Space Institute — Fashion & Interior Design School">
+<meta property="og:description" content="Studio-based fashion and interior design education. Explore courses, meet our students, and start your portfolio.">
+<meta property="og:url" content="https://www.stitchandspace.edu/">
+<meta property="og:site_name" content="Stitch & Space Institute">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stitch & Space Institute">
+<meta name="twitter:description" content="Studio-based fashion and interior design education.">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Stitch & Space Institute",
+  "description": "Fashion and interior design institute offering studio-based diploma and certificate courses.",
+  "url": "https://www.stitchandspace.edu/",
+  "sameAs": [
+    "https://www.instagram.com/",
+    "https://www.facebook.com/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Your City",
+    "addressCountry": "IN"
+  },
+  "hasCourse": [
+    {"@type": "Course", "name": "Diploma in Fashion Designing"},
+    {"@type": "Course", "name": "Diploma in Interior Designing"},
+    {"@type": "Course", "name": "Certificate in Textile & Surface Design"},
+    {"@type": "Course", "name": "Certificate in CAD for Interiors"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --black:#0c0c0d;
+    --charcoal:#1a1a1c;
+    --red:#af1220;
+    --red-bright:#d81e2c;
+    --white:#ffffff;
+    --off-white:#f6f4f1;
+    --gray:#8d8a87;
+    --line:rgba(255,255,255,0.14);
+    --line-dark:rgba(0,0,0,0.12);
+    --radius:2px;
+    --max:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Manrope',sans-serif;
+    background:var(--off-white);
+    color:var(--black);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;}
+  ul{list-style:none;}
+
+  .container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+  .eyebrow{
+    font-family:'Manrope',sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--red);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:2px;background:var(--red);display:inline-block;
+  }
+
+  /* ============ STITCH DIVIDER — signature element ============ */
+  .stitch{
+    height:20px;
+    width:100%;
+    background-image:repeating-linear-gradient(90deg, var(--red) 0 14px, transparent 14px 26px);
+    background-position:center;
+    background-repeat:repeat-x;
+    background-size:26px 2px;
+    background-position-y:center;
+    opacity:0.9;
+  }
+  .stitch.on-dark{background-image:repeating-linear-gradient(90deg, var(--red-bright) 0 14px, transparent 14px 26px);}
+
+  /* ============ HEADER / NAV ============ */
+  header.site-header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(12,12,13,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:var(--max);margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-size:20px;font-weight:700;color:var(--white);
+    letter-spacing:0.01em;
+  }
+  .logo span{color:var(--red-bright);}
+  nav.primary-nav ul{display:flex;gap:32px;}
+  nav.primary-nav a{
+    color:var(--off-white);font-size:14px;font-weight:600;
+    letter-spacing:0.02em;position:relative;padding:4px 0;
+  }
+  nav.primary-nav a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;
+    background:var(--red-bright);transition:width .25s ease;
+  }
+  nav.primary-nav a:hover::after{width:100%;}
+
+  .nav-cta{
+    background:var(--red);color:var(--white);
+    padding:10px 20px;font-size:13px;font-weight:700;
+    letter-spacing:0.04em;text-transform:uppercase;border-radius:var(--radius);
+    transition:background .2s ease;
+  }
+  .nav-cta:hover{background:var(--red-bright);}
+
+  .menu-toggle{display:none;flex-direction:column;gap:5px;width:28px;}
+  .menu-toggle span{height:2px;background:var(--white);width:100%;transition:.25s ease;}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:var(--black);
+    overflow:hidden;
+  }
+  /* PHOTO PLACEHOLDER — swap this element's background for a real photo.
+     To use your own image: replace the background on .hero-photo with
+     background-image:url('your-photo.jpg'); and remove the gradient. */
+  .hero-photo{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(135deg, rgba(175,18,32,0.55), rgba(12,12,13,0.85)),
+      repeating-linear-gradient(45deg, #2a2a2c 0 40px, #232324 40px 80px);
+    opacity:0.55;
+  }
+  .hero-photo::after{
+    content:"ADD COVER PHOTO HERE — 1920×1080";
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;
+    letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);
+    border:2px dashed rgba(255,255,255,0.25);
+    margin:18px;
+  }
+  .hero-scrim{
+    position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(12,12,13,0.96) 8%, rgba(12,12,13,0.35) 55%, rgba(12,12,13,0.15) 100%);
+  }
+  .hero-content{
+    position:relative;z-index:2;
+    padding:24px;
+    max-width:var(--max);margin:0 auto;width:100%;
+    text-align:center;
+  }
+  .hero-content h1{
+    color:var(--white);
+    font-size:clamp(40px, 8vw, 84px);
+    max-width:820px;
+    margin:0 auto;
+  }
+  .hero-content h1 em{
+    font-style:italic;color:var(--red-bright);
+  }
+  .hero-sub{
+    color:rgba(255,255,255,0.78);
+    font-size:clamp(15px,2vw,18px);
+    max-width:520px;
+    margin:22px auto 34px;
+  }
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 28px;font-size:14px;font-weight:700;
+    letter-spacing:0.03em;text-transform:uppercase;
+    border-radius:var(--radius);transition:all .2s ease;
+    border:1.5px solid transparent;
+  }
+  .btn-primary{background:var(--red);color:var(--white);}
+  .btn-primary:hover{background:var(--red-bright);transform:translateY(-2px);}
+  .btn-outline{border-color:rgba(255,255,255,0.4);color:var(--white);}
+  .btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+
+  .hero-stats{
+    position:relative;z-index:2;
+    border-top:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(4,1fr);
+    margin-top:48px;
+  }
+  .hero-stats div{
+    padding:20px 24px;border-right:1px solid var(--line);
+  }
+  .hero-stats div:last-child{border-right:none;}
+  .hero-stats b{display:block;font-family:'Fraunces',serif;font-size:26px;color:var(--red-bright);}
+  .hero-stats span{font-size:12px;color:rgba(255,255,255,0.6);letter-spacing:0.04em;text-transform:uppercase;}
+
+  /* ============ SECTION SHELL ============ */
+  section{padding:96px 0;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(30px,4vw,46px);}
+  .section-head p{color:var(--gray);margin-top:16px;font-size:16px;}
+
+  .on-black{background:var(--black);color:var(--white);}
+  .on-black .section-head p{color:rgba(255,255,255,0.65);}
+  .on-black .eyebrow{color:var(--red-bright);}
+
+  /* ============ ABOUT ============ */
+  .about-grid{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:start;
+  }
+  .about-grid p{margin-bottom:16px;color:#3a3a3a;font-size:16px;}
+  .about-figure{
+    position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;
+    background:repeating-linear-gradient(135deg,#e7e2db 0 20px,#ddd6cc 20px 40px);
+    border:1px solid var(--line-dark);
+  }
+  .about-figure::after{
+    content:"ADD PHOTO";
+    position:absolute;inset:14px;border:2px dashed rgba(0,0,0,0.25);
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:700;letter-spacing:0.12em;color:rgba(0,0,0,0.4);
+  }
+  .about-tag{
+    position:absolute;top:20px;left:-1px;background:var(--red);color:var(--white);
+    font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;
+    padding:8px 16px 8px 20px;z-index:3;
+    clip-path:polygon(0 0,100% 0,92% 50%,100% 100%,0 100%);
+  }
+  .about-list{display:flex;flex-direction:column;gap:14px;margin-top:24px;}
+  .about-list li{display:flex;gap:12px;font-size:15px;color:#2a2a2a;}
+  .about-list li::before{content:"—";color:var(--red);font-weight:700;}
+
+  /* ============ COURSES (duo cards) ============ */
+  .course-duo{
+    display:grid;grid-template-columns:1fr 1fr;gap:28px;
+  }
+  .course-duo-card{
+    display:block;background:var(--charcoal);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;transition:border-color .2s ease,transform .2s ease;
+  }
+  .course-duo-card:hover{border-color:var(--red-bright);transform:translateY(-3px);}
+  .course-duo-image{
+    aspect-ratio:16/10;position:relative;overflow:hidden;
+    background:repeating-linear-gradient(60deg,#242426 0 18px,#1c1c1e 18px 36px);
+  }
+  .course-duo-image::after{
+    content:attr(data-label);position:absolute;inset:14px;border:2px dashed rgba(255,255,255,0.25);
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;
+    font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);
+  }
+  .course-duo-ribbon{
+    position:absolute;top:0;right:20px;z-index:2;
+    background:var(--red);color:var(--white);font-size:10px;font-weight:800;
+    letter-spacing:0.1em;text-transform:uppercase;padding:7px 12px;
+    clip-path:polygon(0 0,100% 0,100% 78%,50% 100%,0 78%);
+  }
+  .course-duo-card.interior .course-duo-ribbon{background:var(--black);border:1px solid var(--line);}
+  .course-duo-body{padding:28px 26px 30px;}
+  .course-duo-body h3{color:var(--white);font-size:24px;margin-bottom:12px;}
+  .course-duo-body p{color:rgba(255,255,255,0.68);font-size:15px;}
+  .course-duo-body .btn{margin-top:20px;}
+
+  /* ============ WHY CHOOSE US ============ */
+  .why-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line-dark);border:1px solid var(--line-dark);
+  }
+  .why-card{background:var(--white);padding:36px 30px;text-align:center;}
+  .why-symbol{
+    width:56px;height:56px;margin:0 auto 20px;border-radius:50%;
+    border:2px dashed var(--red);display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--red);
+  }
+  .why-card h3{font-size:18px;margin-bottom:10px;}
+  .why-card p{color:var(--gray);font-size:14px;}
+
+  /* ============ WHAT SETS US APART ============ */
+  .apart-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .apart-card{
+    background:var(--black);border-left:3px solid var(--red-bright);
+    padding:34px 28px;border-radius:var(--radius);
+  }
+  .apart-symbol{
+    width:48px;height:48px;border-radius:var(--radius);
+    background:rgba(216,30,44,0.12);border:1px solid rgba(216,30,44,0.4);
+    display:flex;align-items:center;justify-content:center;margin-bottom:22px;
+    font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--red-bright);
+  }
+  .apart-card h3{color:var(--white);font-size:18px;margin-bottom:10px;}
+  .apart-card p{color:rgba(255,255,255,0.65);font-size:14px;}
+
+  /* ============ CAROUSEL (shared) ============ */
+  .carousel{position:relative;}
+  .carousel-track{
+    display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
+    padding-bottom:8px;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .carousel-track::-webkit-scrollbar{display:none;}
+  .carousel-slide{
+    flex:0 0 auto;width:min(340px,80vw);scroll-snap-align:start;
+  }
+  .carousel-photo{
+    aspect-ratio:4/3;border-radius:var(--radius);position:relative;overflow:hidden;
+    background:repeating-linear-gradient(60deg,#242426 0 18px,#1c1c1e 18px 36px);
+    border:1px solid var(--line);
+  }
+  .carousel-photo::after{
+    content:attr(data-label);
+    position:absolute;inset:12px;border:2px dashed rgba(255,255,255,0.25);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+    color:rgba(255,255,255,0.5);padding:8px;
+  }
+  .carousel-caption{margin-top:12px;font-size:14px;color:rgba(255,255,255,0.7);}
+  .on-black .carousel-photo{background:repeating-linear-gradient(60deg,#2a1416 0 18px,#231213 18px 36px);}
+
+  .carousel-controls{display:flex;gap:12px;margin-top:24px;}
+  .carousel-btn{
+    width:44px;height:44px;border-radius:50%;
+    border:1px solid rgba(255,255,255,0.3);color:var(--white);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .2s ease;font-size:18px;
+  }
+  .carousel-btn:hover{background:var(--red);border-color:var(--red);}
+  .on-white-carousel .carousel-btn{border-color:rgba(0,0,0,0.2);color:var(--black);}
+  .on-white-carousel .carousel-btn:hover{background:var(--red);color:var(--white);border-color:var(--red);}
+
+  /* ============ FASHION / INTERIOR FEATURE SECTIONS ============ */
+  .feature{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
+  .feature.reverse{grid-template-columns:1.1fr 0.9fr;}
+  .feature.reverse .feature-copy{order:2;}
+  .feature-copy h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:18px;}
+  .feature-copy p{color:rgba(255,255,255,0.7);margin-bottom:16px;}
+  .feature-copy .about-list li{color:rgba(255,255,255,0.85);}
+
+  /* ============ TESTIMONIALS ============ */
+  .testi-slide{
+    background:var(--white);padding:32px 28px;border-radius:var(--radius);
+    border:1px solid var(--line-dark);width:min(400px,82vw);
+    flex:0 0 auto;
+  }
+  .testi-quote{font-family:'Fraunces',serif;font-size:19px;font-style:italic;color:#222;margin-bottom:22px;}
+  .testi-person{display:flex;align-items:center;gap:14px;}
+  .testi-avatar{
+    width:48px;height:48px;border-radius:50%;flex:0 0 auto;
+    background:repeating-linear-gradient(45deg,#e7e2db 0 8px,#ddd6cc 8px 16px);
+    border:1px solid var(--line-dark);
+  }
+  .testi-person b{display:block;font-size:14px;}
+  .testi-person span{font-size:12px;color:var(--gray);}
+
+  /* ============ PLACEMENTS (auto-scrolling marquee) ============ */
+  .placements{padding:88px 0 96px;}
+  .marquee{
+    position:relative;width:100%;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+    mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  }
+  .marquee-track{
+    display:flex;gap:20px;width:max-content;
+    animation:marquee-scroll 38s linear infinite;
+  }
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  @keyframes marquee-scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  .placement-card{
+    flex:0 0 auto;width:300px;background:var(--charcoal);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 24px;position:relative;
+  }
+  .placement-badge{
+    position:absolute;top:0;right:20px;background:var(--red);color:var(--white);
+    font-size:10px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;
+    padding:7px 12px;clip-path:polygon(0 0,100% 0,100% 78%,50% 100%,0 78%);
+  }
+  .placement-top{display:flex;align-items:center;gap:14px;margin-top:14px;margin-bottom:16px;}
+  .placement-avatar{
+    width:52px;height:52px;border-radius:50%;flex:0 0 auto;
+    background:repeating-linear-gradient(45deg,#2a1416 0 8px,#231213 8px 16px);
+    border:1px solid var(--line);
+  }
+  .placement-top b{display:block;font-size:15px;color:var(--white);}
+  .placement-top span{font-size:12px;color:rgba(255,255,255,0.55);}
+  .placement-story{font-size:14px;color:rgba(255,255,255,0.72);margin-bottom:16px;}
+  .placement-role{
+    border-top:1px solid var(--line);padding-top:14px;font-size:13px;
+    display:flex;justify-content:space-between;gap:10px;
+  }
+  .placement-role b{color:var(--red-bright);font-weight:700;}
+  .placement-role span{color:rgba(255,255,255,0.6);}
+
+  /* ============ CONTACT ============ */
+  .contact-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;}
+  .contact-info h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:18px;}
+  .contact-info p{color:var(--gray);margin-bottom:28px;}
+  .contact-info{grid-row:1 / span 2;}
+.map-wrap{margin-top:8px;}
+.map-heading{
+  font-family:'Fraunces',serif;font-size:15px;font-weight:700;
+  letter-spacing:0.02em;color:var(--white);margin-bottom:12px;
+}
+.map-embed{
+  aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);
+}
+.map-embed iframe{width:100%;height:100%;border:0;display:block;}
+  .contact-detail{display:flex;gap:14px;margin-bottom:20px;font-size:15px;}
+  .contact-detail b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--red);margin-bottom:4px;}
+
+  form.contact-form{
+    background:var(--white);border:1px solid var(--line-dark);padding:40px;border-radius:var(--radius);
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field.full{grid-column:1/-1;}
+  label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#333;}
+  input,select,textarea{
+    padding:13px 14px;border:1px solid #d8d3cc;border-radius:var(--radius);
+    font-family:inherit;font-size:14px;background:var(--off-white);color:var(--black);
+  }
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--red);outline-offset:1px;}
+  textarea{resize:vertical;min-height:100px;}
+  .submit-btn{
+    width:100%;background:var(--red);color:var(--white);
+    padding:16px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+    border-radius:var(--radius);margin-top:6px;transition:background .2s ease;
+  }
+  .submit-btn:hover{background:var(--red-bright);}
+  .form-note{font-size:12px;color:var(--gray);margin-top:12px;}
+  #formStatus{font-size:13px;font-weight:700;margin-top:12px;display:none;}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--black);color:rgba(255,255,255,0.75);padding:72px 0 0;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:56px;}
+  .footer-logo{font-family:'Fraunces',serif;font-size:22px;color:var(--white);margin-bottom:14px;}
+  .footer-logo span{color:var(--red-bright);}
+  .footer-col h4{font-size:13px;color:var(--white);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:18px;}
+  .footer-col ul li{margin-bottom:11px;font-size:14px;}
+  .footer-col ul li a:hover{color:var(--red-bright);}
+  .footer-social{display:flex;gap:12px;margin-top:18px;}
+  .footer-social a{
+    width:38px;height:38px;border:1px solid rgba(255,255,255,0.2);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;transition:all .2s ease;
+  }
+  .footer-social a:hover{background:var(--red);border-color:var(--red);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding:22px 0 30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-size:12px;color:rgba(255,255,255,0.5);
+  }
+  .footer-bottom a:hover{color:var(--white);}
+
+  .logo-img{
+    height: 70px;
+    width: auto;
+    display: block;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .about-grid,.feature,.feature.reverse,.contact-wrap{grid-template-columns:1fr;}
+    .feature.reverse .feature-copy{order:0;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);}
+    .hero-stats div:nth-child(2){border-right:none;}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .apart-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:760px){
+    .logo-img{height: 50px;}
+    nav.primary-nav{
+      position:fixed;top:65px;left:0;right:0;background:var(--black);
+      flex-direction:column;padding:12px 24px 24px;border-bottom:1px solid var(--line);
+      transform:translateY(-140%);opacity:0;transition:all .25s ease;
+    }
+    nav.primary-nav.open{transform:translateY(0);opacity:1;}
+    nav.primary-nav ul{flex-direction:column;gap:0;}
+    nav.primary-nav ul li{border-bottom:1px solid var(--line);}
+    nav.primary-nav ul li a{display:block;padding:16px 0;}
+    .nav-cta{display:none;}
+    .menu-toggle{display:flex;}
+    section{padding:64px 0;}
+    .form-row{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+    .footer-bottom{flex-direction:column;text-align:center;}
+    .course-duo{gap:14px;}
+    .course-duo-body{padding:18px 16px 20px;}
+    .course-duo-body h3{font-size:18px;}
+    .course-duo-body p{font-size:13px;}
+  }
+  @media (max-width:480px){
+    .footer-grid{grid-template-columns:1fr;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:1fr;}
+    .apart-grid{grid-template-columns:1fr;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;animation:none!important;}
+  }
+
+  
+  :focus-visible{outline:2px solid var(--red-bright);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="nav-wrap">
+    <img src="gift logo.png" alt="logo" class="logo-img">
+    <nav class="primary-nav" id="primaryNav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#fashion">Fashion</a></li>
+        <li><a href="#interior">Interior</a></li>
+        <li><a href="#testimonials">Students</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="nav-cta">Apply Now</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <!-- Photo placeholder: translucent background photo with text overlaid on top -->
+  <div class="hero-photo" role="img" aria-label="Placeholder for institute cover photograph"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <p class="eyebrow" style="color:var(--red-bright)">Admissions Open — 2026 Batch</p>
+    <h1>Design what people <em>wear</em>.<br>Design where they <em>live</em>.</h1>
+    <p class="hero-sub">GIFT (Guwahati Institute of Fashion Technology) is a design institute in Guwahati offering industry-focussed programs in Fashion & Textitle Design and Interior Design. Build real-world skills, work on hands-on projects, learn from industry professionals, and create your protfolio from day one.</p>
+    <div class="hero-actions">
+      <a href="#courses" class="btn btn-primary">Explore Courses</a>
+      <a href="#contact" class="btn btn-outline">Book a Campus Tour</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div><b>18</b><span>Years Teaching</span></div>
+    <div><b>1,200+</b><span>Alumni</span></div>
+    <div><b>94%</b><span>Placed in 6 Months</span></div>
+    <div><b>2</b><span>Flagship Disciplines</span></div>
+  </div>
+</section>
+
+<!-- ============ PLACEMENTS ============ -->
+<section class="placements on-black">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Placements</p>
+      <h2>Recently placed, straight from the studio.</h2>
+      <p>A few of our graduates and where they landed after their final showcase.</p>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track" id="placementsTrack">
+      <!-- Set 1 -->
+      <div class="placement-card">
+        <span class="placement-badge">Fashion</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Ananya R.</b><span>Batch of 2025</span></div>
+        </div>
+        <p class="placement-story">Spotted at the graduate runway showcase and signed on within two weeks of walking the ramp.</p>
+        <div class="placement-role"><b>Assistant Designer</b><span>House of Meraki</span></div>
+      </div>
+      <div class="placement-card">
+        <span class="placement-badge">Interior</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Rehan K.</b><span>Batch of 2024</span></div>
+        </div>
+        <p class="placement-story">His final project — a café fit-out for a live client brief — became his interview portfolio piece.</p>
+        <div class="placement-role"><b>Interior Designer</b><span>Vaastu Studio</span></div>
+      </div>
+      <div class="placement-card">
+        <span class="placement-badge">Fashion</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Priya M.</b><span>Batch of 2025</span></div>
+        </div>
+        <p class="placement-story">Her textile print collection caught a sourcing manager's eye during the annual showcase.</p>
+        <div class="placement-role"><b>Textile Designer</b><span>Sundara Exports</span></div>
+      </div>
+      <div class="placement-card">
+        <span class="placement-badge">Interior</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Devansh T.</b><span>Batch of 2023</span></div>
+        </div>
+        <p class="placement-story">Started as an intern during his final semester and was offered a full-time seat before graduating.</p>
+        <div class="placement-role"><b>3D Visualiser</b><span>Blockform Interiors</span></div>
+      </div>
+      <div class="placement-card">
+        <span class="placement-badge">Fashion</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Meher S.</b><span>Batch of 2024</span></div>
+        </div>
+        <p class="placement-story">Now leads pattern development for a growing ready-to-wear label she joined right after graduating.</p>
+        <div class="placement-role"><b>Pattern Maker</b><span>Studio Noor</span></div>
+      </div>
+      <div class="placement-card">
+        <span class="placement-badge">Interior</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Aritra B.</b><span>Batch of 2025</span></div>
+        </div>
+        <p class="placement-story">Placed through campus recruitment with a turnkey firm looking to expand its residential team.</p>
+        <div class="placement-role"><b>Design Associate</b><span>Cornerstone Living</span></div>
+      </div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="placement-card" aria-hidden="true">
+        <span class="placement-badge">Fashion</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Ananya R.</b><span>Batch of 2025</span></div>
+        </div>
+        <p class="placement-story">Spotted at the graduate runway showcase and signed on within two weeks of walking the ramp.</p>
+        <div class="placement-role"><b>Assistant Designer</b><span>House of Meraki</span></div>
+      </div>
+      <div class="placement-card" aria-hidden="true">
+        <span class="placement-badge">Interior</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Rehan K.</b><span>Batch of 2024</span></div>
+        </div>
+        <p class="placement-story">His final project — a café fit-out for a live client brief — became his interview portfolio piece.</p>
+        <div class="placement-role"><b>Interior Designer</b><span>Vaastu Studio</span></div>
+      </div>
+      <div class="placement-card" aria-hidden="true">
+        <span class="placement-badge">Fashion</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Priya M.</b><span>Batch of 2025</span></div>
+        </div>
+        <p class="placement-story">Her textile print collection caught a sourcing manager's eye during the annual showcase.</p>
+        <div class="placement-role"><b>Textile Designer</b><span>Sundara Exports</span></div>
+      </div>
+      <div class="placement-card" aria-hidden="true">
+        <span class="placement-badge">Interior</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Devansh T.</b><span>Batch of 2023</span></div>
+        </div>
+        <p class="placement-story">Started as an intern during his final semester and was offered a full-time seat before graduating.</p>
+        <div class="placement-role"><b>3D Visualiser</b><span>Blockform Interiors</span></div>
+      </div>
+      <div class="placement-card" aria-hidden="true">
+        <span class="placement-badge">Fashion</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Meher S.</b><span>Batch of 2024</span></div>
+        </div>
+        <p class="placement-story">Now leads pattern development for a growing ready-to-wear label she joined right after graduating.</p>
+        <div class="placement-role"><b>Pattern Maker</b><span>Studio Noor</span></div>
+      </div>
+      <div class="placement-card" aria-hidden="true">
+        <span class="placement-badge">Interior</span>
+        <div class="placement-top">
+          <div class="placement-avatar"></div>
+          <div><b>Aritra B.</b><span>Batch of 2025</span></div>
+        </div>
+        <p class="placement-story">Placed through campus recruitment with a turnkey firm looking to expand its residential team.</p>
+        <div class="placement-role"><b>Design Associate</b><span>Cornerstone Living</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch"></div>
+
+<!-- ============ ABOUT US ============ -->
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <p class="eyebrow">About Us</p>
+      <h2>A studio, not a lecture hall:</h2>
+      <h2>Redefining Design Education in Northeast India</h2>
+      <br>
+      <p>At GIFT (Guwahati Institute of Fashion Technology), we believe design isn’t memorised—it’s created. We have swapped traditional lecture halls for immersive, industry-grade creative studios right here in Guwahati, Assam. As a pioneer design college under prestigious Gauhati University, our Bachelor of Design (B.Des) programmes offer an experimental, project-based learning ecosystem. Here, theory serves practice, and students work alongside industry professionals to transform raw concepts into market-ready innovations</p>
+      <p>As the best fashion design institute in Guwahati, our university-affiliated degree programs bridge North East India's rich heritage with global market trends. Whether you are enrolling in our premier B.Des Fashion & Textile Design program or pursuing a career through our industry-focused B.Des Interior Design course, our campus serves as a launching pad for future-proof careers. Structured in alignment with the National Education Policy (NEP 2020), we provide hands-on experience through regular market visits, industrial tours, and live fashion shows. By combining studio-based learning with robust 100% placement assistance and elite internship opportunities, GIFT transforms raw creative passion into thriving, employable professions.</p>
+      
+      <ul class="about-list">
+        <li>Industry-practising faculty across both departments</li>
+        <li>In-house tailoring, textile and 3D visualisation labs</li>
+        <li>Annual graduate showcase open to the public and press</li>
+      </ul>
+    </div>
+    <div class="about-figure">
+      <span class="about-tag">Est. 2009</span>
+    </div>
+  </div>
+</section>
+
+<div class="stitch"></div>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why-choose-us">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>Reasons students pick this Institution.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-symbol">01</div>
+        <h3>Practical Learning</h3>
+        <p>Hands-on projects, real-world scenarios, and internships.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-symbol">02</div>
+        <h3>Experienced Faculty</h3>
+        <p>Learn from industry leaders and acclaimed professionals.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-symbol">03</div>
+        <h3>Placement Assistence</h3>
+        <p>Dedicated career support to secure your dream job.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-symbol">04</div>
+        <h3>Affordable Education</h3>
+        <p>Scholarships and flexible payment options to support your dreams.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-symbol">05</div>
+        <h3>AI Prompting and Soft Skills Training</h3>
+        <p>Master cutting-edge AI prompting techniques to enhance creativity and productivity, and learn soft skills to excel in interviews and lead teams</p>
+      </div>
+      <div class="why-card">
+        <div class="why-symbol">06</div>
+        <h3>Accredited Degrees</h3>
+        <p>Earn prestigious degrees under Gauhati University- a NAAC A+ University, known for it's academic excellence and global reputation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch on-dark" style="background-color:var(--black)"></div>
+
+<!-- ============ WHAT SETS US APART ============ -->
+<section id="sets-us-apart" class="on-black">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What Sets Us Apart</p>
+      <h2>Not your typical design school.</h2>
+    </div>
+    <div class="apart-grid">
+      <div class="apart-card">
+        <div class="apart-symbol">A</div>
+        <h3>AI-Powered Learning Edge </h3>
+        <p>Stay ahead of the curve with exclusive training in AI prompting techniques and tools that give you a futuristic advantage in any field.</p>
+      </div>
+      <div class="apart-card">
+        <div class="apart-symbol">B</div>
+        <h3>Industry-Driven Curriculum</h3>
+        <p>Our programs are designed and updated in collaboration with top industry experts, ensuring you graduate job-ready with skills that matter.</p>
+      </div>
+      <div class="apart-card">
+        <div class="apart-symbol">C</div>
+        <h3>Holistic Development</h3>
+        <p>Master essential life and soft skills with hands-on workshops in leadership, communication, time management, and more, making you a versatile professional.</p>
+      </div>
+      <div class="apart-card">
+        <div class="apart-symbol">D</div>
+        <h3>Career-First Approach</h3>
+        <p>From mock interviews to resume building and guaranteed placement assistence, we're with you at every step to land your dream job.</p>
+      </div>
+      <div class="apart-card">
+        <div class="apart-symbol">E</div>
+        <h3>Affordable Excellence</h3>
+        <p>Achieve your dreams with our Scholarship programs, flexible payment plans, and cost-effective, high-quality education.</p>
+      </div>
+      <div class="apart-card">
+        <div class="apart-symbol">F</div>
+        <h3>A Network That Works For You</h3>
+        <p>Join a vibrant community of alumni, professionals, and mentors who will open doors to opportunities worldwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch"></div>
+
+<!-- ============ COURSES OFFERED ============ -->
+<section id="courses" class="on-black">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Courses Offered</p>
+      <h2>Two disciplines. One studio culture.</h2>
+      <p>Choose the track that matches where you want to take your design career.</p>
+    </div>
+    <div class="course-duo">
+      <div class="course-duo-card fashion">
+        <div class="course-duo-image" data-label="Add fashion designing photo">
+          <span class="course-duo-ribbon">Fashion</span>
+        </div>
+        <div class="course-duo-body">
+          <h3>Fashion Designing</h3>
+          <p>Garment construction, draping, textiles and collection development — from first sketch to final stitch.</p>
+          <a href="fashion-designing.html" class="btn btn-primary">Explore More</a>
+        </div>
+      </div>
+      <div class="course-duo-card interior">
+        <div class="course-duo-image" data-label="Add interior designing photo">
+          <span class="course-duo-ribbon">Interior</span>
+        </div>
+        <div class="course-duo-body">
+          <h3>Interior Designing</h3>
+          <p>Spatial planning, materials, lighting and visualisation — turning a brief into a livable space.</p>
+          <a href="interior-designing.html" class="btn btn-primary">Explore More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch on-dark" style="background-color:var(--black)"></div>
+
+<!-- ============ FASHION DESIGNING ============ -->
+<section id="fashion" class="on-black">
+  <div class="container">
+    <div class="feature-copy" style="max-width:760px;">
+      <p class="eyebrow">Fashion Designing</p>
+      <h2>From first sketch to final stitch.</h2>
+      <p>Our fashion design track covers everything between a sketchbook idea and a garment on a runway: draping, pattern-making, construction, textiles, and collection storytelling.</p>
+      <p>Students work in fully equipped studios with industrial machines, and every term ends with a critique from practising designers rather than a written exam alone.</p>
+      <ul class="about-list">
+        <li>Garment construction & draping studios</li>
+        <li>Textile, print and embroidery labs</li>
+        <li>Mentorship from working designers</li>
+        <li>Annual graduate runway showcase</li>
+      </ul>
+    </div>
+  </div>
+  <div class="marquee" style="margin-top:48px;">
+    <div class="marquee-track">
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add fashion studio photo"></div>
+        <p class="carousel-caption">Draping studio, second-year cohort</p>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add runway show photo"></div>
+        <p class="carousel-caption">Annual graduate runway showcase</p>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add textile lab photo"></div>
+        <p class="carousel-caption">Textile and print development lab</p>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add pattern cutting photo"></div>
+        <p class="carousel-caption">Pattern cutting masterclass</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add fashion studio photo"></div>
+        <p class="carousel-caption">Draping studio, second-year cohort</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add runway show photo"></div>
+        <p class="carousel-caption">Annual graduate runway showcase</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add textile lab photo"></div>
+        <p class="carousel-caption">Textile and print development lab</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add pattern cutting photo"></div>
+        <p class="carousel-caption">Pattern cutting masterclass</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch on-dark" style="background-color:var(--black)"></div>
+
+<!-- ============ INTERIOR DESIGNING ============ -->
+<section id="interior" class="on-black">
+  <div class="container">
+    <div class="feature-copy" style="max-width:760px;">
+      <p class="eyebrow">Interior Designing</p>
+      <h2>Space is the material you shape.</h2>
+      <p>The interior design track blends spatial planning, materials and lighting with the software skills studios actually use, so students graduate able to take a brief from concept to a construction-ready drawing set.</p>
+      <p>Live briefs with real clients — cafés, clinics, small retail spaces — run alongside the core coursework each year.</p>
+      <ul class="about-list">
+        <li>CAD, SketchUp and rendering workshops</li>
+        <li>Materials, lighting and sustainability modules</li>
+        <li>Live client briefs from year two onward</li>
+        <li>Site visits to active design projects</li>
+      </ul>
+    </div>
+  </div>
+  <div class="marquee" style="margin-top:48px;">
+    <div class="marquee-track">
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add model-making photo"></div>
+        <p class="carousel-caption">Spatial model-making workshop</p>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add rendering lab photo"></div>
+        <p class="carousel-caption">3D visualisation and rendering lab</p>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add site visit photo"></div>
+        <p class="carousel-caption">Site visit to a live client project</p>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-photo" data-label="Add materials library photo"></div>
+        <p class="carousel-caption">Materials and finishes library</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add model-making photo"></div>
+        <p class="carousel-caption">Spatial model-making workshop</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add rendering lab photo"></div>
+        <p class="carousel-caption">3D visualisation and rendering lab</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add site visit photo"></div>
+        <p class="carousel-caption">Site visit to a live client project</p>
+      </div>
+      <div class="carousel-slide" aria-hidden="true">
+        <div class="carousel-photo" data-label="Add materials library photo"></div>
+        <p class="carousel-caption">Materials and finishes library</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch"></div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Student Testimonials</p>
+      <h2>What our students say.</h2>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="testi-slide">
+        <p class="testi-quote">"The studio hours mattered more than any textbook — by third year I already had a portfolio I was proud to show."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Ananya R.</b><span>Fashion Designing, Batch of 2025</span></div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <p class="testi-quote">"Working on a live client brief in second year changed how I think about design — it's not theoretical anymore."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Rehan K.</b><span>Interior Designing, Batch of 2024</span></div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <p class="testi-quote">"Small batches meant the faculty actually knew my work. The critiques were tough but that's exactly what I needed."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Priya M.</b><span>Textile & Surface Design, Batch of 2025</span></div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <p class="testi-quote">"The runway showcase got my final collection in front of two local labels. I had a job before graduation."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Devansh T.</b><span>Fashion Designing, Batch of 2023</span></div>
+        </div>
+      </div>
+      <div class="testi-slide" aria-hidden="true">
+        <p class="testi-quote">"The studio hours mattered more than any textbook — by third year I already had a portfolio I was proud to show."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Ananya R.</b><span>Fashion Designing, Batch of 2025</span></div>
+        </div>
+      </div>
+      <div class="testi-slide" aria-hidden="true">
+        <p class="testi-quote">"Working on a live client brief in second year changed how I think about design — it's not theoretical anymore."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Rehan K.</b><span>Interior Designing, Batch of 2024</span></div>
+        </div>
+      </div>
+      <div class="testi-slide" aria-hidden="true">
+        <p class="testi-quote">"Small batches meant the faculty actually knew my work. The critiques were tough but that's exactly what I needed."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Priya M.</b><span>Textile & Surface Design, Batch of 2025</span></div>
+        </div>
+      </div>
+      <div class="testi-slide" aria-hidden="true">
+        <p class="testi-quote">"The runway showcase got my final collection in front of two local labels. I had a job before graduation."</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div><b>Devansh T.</b><span>Fashion Designing, Batch of 2023</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch"></div>
+
+<!-- ============ CONTACT US ============ -->
+<section id="contact" class="on-black">
+  <div class="container contact-wrap">
+    <div class="contact-info">
+      <p class="eyebrow">Contact Us</p>
+      <h2>Start your application.</h2>
+      <p>Reach out with questions about courses, fees, or to schedule a campus tour. Our admissions team replies within one working day.</p>
+      <div class="map-wrap">
+  <h3 class="map-heading">Find Us on the Map</h3>
+  <div class="map-embed">
+    <iframe
+      src="https://www.google.com/maps?q=Guwahati+Institute+of+Fashion+Technology,+Dr+R.P+Road,+Near+Ganesh+Mandir,+Ganeshguri,+Guwahati+781006&output=embed"
+      title="Guwahati institute of fashion Technology (GIFT) location on Google Maps"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+<br>
+      <div class="contact-detail">
+        <div><b>Address</b>Guwahati Institute of Fashion Technology (GIFT), DR R.P Road, Near Ganesh Mandir, Ganeshguri, Guwahati 781006</div>
+      </div>
+      <div class="contact-detail">
+        <div><b>Phone</b>+91 9864104007, +91 6001511449, +91 3613560276</div>
+      </div>
+      <div class="contact-detail">
+        <div><b>Email</b>giftdispur@gmail.com</div>
+      </div>
+      <div class="contact-detail">
+        <div><b>Office Hours</b>Mon – Sat, 9:00 AM – 6:00 PM</div>
+      </div>
+    </div>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="fullName" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required autocomplete="address-level2">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" required autocomplete="address-level1">
+        </div>
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="course">Course Interested In</label>
+          <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option>Diploma in Fashion Designing</option>
+            <option>Diploma in Interior Designing</option>
+            <option>Certificate in Textile & Surface Design</option>
+            <option>Certificate in CAD for Interiors</option>
+            <option>Fashion Communication & Styling</option>
+            <option>Sustainable & Material Studies</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us a little about what you're looking for..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Send Enquiry</button>
+      <p class="form-note">By submitting, you agree to be contacted by our admissions team regarding your enquiry.</p>
+      <p id="formStatus"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <img src="gift logo.png" alt="logo" style="height:100px; width:auto;">
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);max-width:280px;">A studio-first institute for fashion and interior design, training designers since 2009.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#fashion">Fashion Designing</a></li>
+        <li><a href="#interior">Interior Designing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#courses">B DES Fashion & Textitle Design</a></li>
+        <li><a href="#courses">B DES Interior Design</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>Guwahati Institute of Fashion Technology (GIFT), DR R.P Road, Near Ganesh Mandir, Ganeshguri, Guwahati 781006</li>
+        <li>+91 9864104007, +91 6001511449, +91 3613560276</li>
+        <li>giftdispur@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Guwahati Institute of Fashion Technology (GIFT). All rights reserved.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const primaryNav = document.getElementById('primaryNav');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = primaryNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  primaryNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      primaryNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Generic carousel scroll controls
+  document.querySelectorAll('.carousel-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const track = document.getElementById(btn.dataset.target);
+      const dir = parseInt(btn.dataset.dir, 10);
+      const slide = track.querySelector('.carousel-slide');
+      const gap = 20;
+      const scrollAmount = (slide.getBoundingClientRect().width + gap) * dir;
+      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  });
+
+  // Contact form (front-end only — wire this up to your backend or form service)
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+    formStatus.style.display = 'block';
+    formStatus.style.color = '#0a7a2f';
+    formStatus.textContent = "Thanks — your enquiry has been received. We'll be in touch within one working day.";
+    contactForm.reset();
+  });
+</script>
+
+</body>
+</html>
