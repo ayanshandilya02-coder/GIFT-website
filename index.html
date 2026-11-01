@@ -243,6 +243,29 @@
   .hero-stats b{display:block;font-family:'Fraunces',serif;font-size:26px;color:var(--red-bright);}
   .hero-stats span{font-size:12px;color:rgba(255,255,255,0.6);letter-spacing:0.04em;text-transform:uppercase;}
 
+  /* ===== HERO PHOTO SLIDER ===== */
+.hero-slides{
+  position:absolute;inset:0;overflow:hidden;
+  background:var(--black);
+  opacity:0.55;              /* keeps the translucent look */
+}
+.hero-slides-track{
+  display:flex;width:500%;height:100%;   /* 4 photos + 1 repeat of the first */
+  animation:hero-slide 24s ease-in-out infinite;
+}
+.hero-slides-track img{
+  flex:0 0 20%;width:20%;height:100%;
+  object-fit:cover;object-position:center;
+}
+@keyframes hero-slide{
+  0%,18%   {transform:translateX(0);}
+  20%,38%  {transform:translateX(-20%);}
+  40%,58%  {transform:translateX(-40%);}
+  60%,78%  {transform:translateX(-60%);}
+  80%,98%     {transform:translateX(-80%);}
+  100%    {transform:translateX(-80%);}
+}
+
   /* ============ SECTION SHELL ============ */
   section{padding:96px 0;}
   .section-head{max-width:640px;margin-bottom:56px;}
@@ -275,6 +298,25 @@
     padding:8px 16px 8px 20px;z-index:3;
     clip-path:polygon(0 0,100% 0,92% 50%,100% 100%,0 100%);
   }
+  /* ===== ABOUT US PHOTO SLIDER (2 photos) ===== */
+.about-figure.has-slider::after{display:none;}   /* hides the dashed placeholder frame */
+.about-slides{
+  position:absolute;inset:0;overflow:hidden;
+}
+.about-slides-track{
+  display:flex;width:300%;height:100%;
+  animation:about-slide 12s ease-in-out infinite;
+}
+.about-slides-track img{
+  flex:0 0 33.3333%;width:33.3333%;height:100%;
+  object-fit:cover;object-position:center;
+}
+@keyframes about-slide{
+  0%,40%  {transform:translateX(0);}
+  50%,90% {transform:translateX(-33.3333%);}
+  100%    {transform:translateX(-66.6666%);}
+}
+
   .about-list{display:flex;flex-direction:column;gap:14px;margin-top:24px;}
   .about-list li{display:flex;gap:12px;font-size:15px;color:#2a2a2a;}
   .about-list li::before{content:"—";color:var(--red);font-weight:700;}
@@ -308,6 +350,24 @@
   .course-duo-body h3{color:var(--white);font-size:24px;margin-bottom:12px;}
   .course-duo-body p{color:rgba(255,255,255,0.68);font-size:15px;}
   .course-duo-body .btn{margin-top:20px;}
+
+  /* ===== COURSE DUO CARDS: photos fill the frame, no dotted lines ===== */
+.course-duo-image{
+  position:relative;
+  aspect-ratio:16/10;
+  overflow:hidden;
+  background:#1c1c1e;               /* solid colour, no pattern */
+}
+.course-duo-image::after{
+  display:none;                      /* removes the dashed border */
+}
+.course-duo-image img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;                  /* fills the frame, cropping the edges */
+  object-position:center;            /* change to e.g. "50% 30%" to shift the crop */
+  display:block;
+}
 
   /* ============ WHY CHOOSE US ============ */
   .why-grid{
@@ -555,6 +615,37 @@
 
   
   :focus-visible{outline:2px solid var(--red-bright);outline-offset:2px;}
+
+  /* Hide the course ribbons on mobile */
+@media (max-width:760px){
+  .course-duo-ribbon{display:none !important;}
+}
+/* Remove the dotted frame from the gallery photos */
+.carousel-photo::after{display:none;}
+
+/* Gallery photos: every slot the same size, photos fill and crop evenly */
+.marquee .carousel-slide{
+  flex:0 0 auto;
+  width:min(340px,80vw);
+}
+.marquee .carousel-photo{
+  position:relative;
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#1c1c1e;
+}
+.marquee .carousel-photo img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;          /* fills the slot, cropping the edges */
+  object-position:center;    /* change to e.g. "50% 30%" to shift the crop */
+  display:block;
+}
+.marquee .carousel-caption{
+  min-height:3em;            /* keeps captions the same height in every slot */
+  margin-top:12px;
+}
 </style>
 </head>
 <body>
@@ -583,7 +674,15 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <!-- Photo placeholder: translucent background photo with text overlaid on top -->
-  <div class="hero-photo" role="img" aria-label="Placeholder for institute cover photograph"></div>
+  <div class="hero-slides">
+  <div class="hero-slides-track">
+    <img src="Guwahati-Institute-of-Fashion-Technology-fashion-design.jpeg" alt="Students working in the design studio">
+    <img src="Guwahati-Institute-of-Fashion-Technology-Interior-site-visit.jpeg" alt="Graduate runway showcase">
+    <img src="Guwahati-Institute-of-Fashion-Technology-student-award.jpeg" alt="Interior design project on display">
+    <img src="Guwahati-Institute-of-Fashion-Technology-students.jpeg" alt="Campus and classrooms">
+    <img src="Guwahati-Institute-of-Fashion-Technology.png.png" alt="" aria-hidden="true">  <!-- repeat of photo 1 -->
+  </div>
+</div>
   <div class="hero-scrim"></div>
   <div class="hero-content">
     <p class="eyebrow" style="color:var(--red-bright)">Admissions Open — 2026 Batch</p>
@@ -746,9 +845,16 @@
         <li>Annual graduate showcase open to the public and press</li>
       </ul>
     </div>
-    <div class="about-figure">
-      <span class="about-tag">Est. 2009</span>
+    <div class="about-figure has-slider">
+  <div class="about-slides">
+    <div class="about-slides-track">
+      <img src="fashion-design-institute-guwahati-gift-students-fashion-design.jpg.jpeg" alt="Runway exhibition of costume designed by students of Guwahati Institute of Fashion Technology (GIFT), Guwahati ">
+      <img src="fashion-design-institute-guwahati-gift-students-interior-design.jpg.jpeg" alt="Interior Design model created by students of Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+      <img src="fashion-design-institute-guwahati-gift-students-fashion-design.jpg.jpeg" alt="Runway exhibition of costume designed by students of Guwahati Institute of Fashion Technology (GIFT), Guwahati" aria-hidden="true">  <!-- repeat of photo 1 for a seamless loop -->
     </div>
+  </div>
+  <span class="about-tag">Est. 2008</span>
+</div>
   </div>
 </section>
 
@@ -852,22 +958,24 @@
     </div>
     <div class="course-duo">
       <div class="course-duo-card fashion">
-        <div class="course-duo-image" data-label="Add fashion designing photo">
+        <div class="course-duo-image">
           <span class="course-duo-ribbon">Fashion</span>
+          <img src="fashion-design-institute-guwahati-gift-Bdes-Fashion-Design.jpg.jpeg" alt="Costume designed by BDes Fashion & Textile Design students of Guwahati Institute of Fashion Technology (GIFT), Guwahati">
         </div>
         <div class="course-duo-body">
-          <h3>Fashion Designing</h3>
+          <h3> BDes Fashion & Textile Design</h3>
           <p>Garment construction, draping, textiles and collection development — from first sketch to final stitch.</p>
           <a href="fashion-designing.html" class="btn btn-primary">Explore More</a>
         </div>
       </div>
       <div class="course-duo-card interior">
-        <div class="course-duo-image" data-label="Add interior designing photo">
+        <div class="course-duo-image">
           <span class="course-duo-ribbon">Interior</span>
+          <img src="fashion-design-institute-guwahati-gift-BDes-Interior-Design.jpg.jpeg" alt="Living Room Interior Design by BDes Interior Design students of Guwahati Institute of Fashion Technology (GIFT), Guwahati ">
         </div>
         <div class="course-duo-body">
-          <h3>Interior Designing</h3>
-          <p>Spatial planning, materials, lighting and visualisation — turning a brief into a livable space.</p>
+          <h3>BDes Interior Design</h3>
+          <p>Creative space planning, materials, lighting and visualisation — Transforming ideas into functional spaces.</p>
           <a href="interior-designing.html" class="btn btn-primary">Explore More</a>
         </div>
       </div>
@@ -896,20 +1004,28 @@
   <div class="marquee" style="margin-top:48px;">
     <div class="marquee-track">
       <div class="carousel-slide">
-        <div class="carousel-photo" data-label="Add fashion studio photo"></div>
-        <p class="carousel-caption">Draping studio, second-year cohort</p>
+        <div class="carousel-photo">
+          <img src="fashion-design-institute-guwahati-gift-garment-construction.jpg.jpeg" alt="Garment construction class taken as a part of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
+        <p class="carousel-caption">Garment Construction</p>
       </div>
       <div class="carousel-slide">
-        <div class="carousel-photo" data-label="Add runway show photo"></div>
+        <div class="carousel-photo" data-label="Add runway show photo">
+          <img src="fashion-design-institute-guwahati-gift-runway-showcase.jpg.jpeg" alt="Runway Showcase by students of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
         <p class="carousel-caption">Annual graduate runway showcase</p>
       </div>
       <div class="carousel-slide">
-        <div class="carousel-photo" data-label="Add textile lab photo"></div>
-        <p class="carousel-caption">Textile and print development lab</p>
+        <div class="carousel-photo" data-label="Add textile lab photo">
+          <img src="fashion-design-institute-guwahati-gift-handloom-weaving.jpg.jpeg" alt="Handloom Weaving class taken as part of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
+        <p class="carousel-caption">Handloom Weaving</p>
       </div>
       <div class="carousel-slide">
-        <div class="carousel-photo" data-label="Add pattern cutting photo"></div>
-        <p class="carousel-caption">Pattern cutting masterclass</p>
+        <div class="carousel-photo" data-label="Add pattern cutting photo">
+          <img src="fashion-design-institute-guwahati-gift-pattern-making.jpg.jpeg" alt="Pattern making class taken as part of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
+        <p class="carousel-caption">Pattern making</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
         <div class="carousel-photo" data-label="Add fashion studio photo"></div>
@@ -956,11 +1072,15 @@
         <p class="carousel-caption">Spatial model-making workshop</p>
       </div>
       <div class="carousel-slide">
-        <div class="carousel-photo" data-label="Add rendering lab photo"></div>
+        <div class="carousel-photo" data-label="Add rendering lab photo">
+          <img src="Interior-design-institute-guwahati-gift-3D -visualization.jpg.jpeg" alt="3D Visualization doen by students of BDes Interior Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
         <p class="carousel-caption">3D visualisation and rendering lab</p>
       </div>
       <div class="carousel-slide">
-        <div class="carousel-photo" data-label="Add site visit photo"></div>
+        <div class="carousel-photo" data-label="Add site visit photo">
+          <img src="Interior-design-institute-guwahati-gift-site visit.jpg.jpeg" alt="Model Making workshop attended by students of BDes Interior Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
         <p class="carousel-caption">Site visit to a live client project</p>
       </div>
       <div class="carousel-slide">
@@ -968,12 +1088,16 @@
         <p class="carousel-caption">Materials and finishes library</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
-        <div class="carousel-photo" data-label="Add model-making photo"></div>
+        <div class="carousel-photo" data-label="Add model-making photo">
+          <img src="Interior-design-institute-guwahati-gift-model-making.jpg.jpeg" alt="Model Making workshop attended by students of BDes Interior Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
         <p class="carousel-caption">Spatial model-making workshop</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
-        <div class="carousel-photo" data-label="Add rendering lab photo"></div>
-        <p class="carousel-caption">3D visualisation and rendering lab</p>
+        <div class="carousel-photo" data-label="Add rendering lab photo">
+          <img src="Interior-design-institute-guwahati-gift-Bdes-market-visit.jpg.jpeg" alt="Market Visit by students of BDes Interior Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
+        <p class="carousel-caption">Market visit</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
         <div class="carousel-photo" data-label="Add site visit photo"></div>
