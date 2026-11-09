@@ -646,6 +646,21 @@
   min-height:3em;            /* keeps captions the same height in every slot */
   margin-top:12px;
 }
+
+
+/* Space between testimonial photo and text */
+.testi-person{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.testi-person > div:last-child{
+  min-width:0;   /* lets long names and roles wrap instead of overlapping */
+}
+img.testi-avatar{
+  margin:0;
+  flex:0 0 auto;
+}
 </style>
 </head>
 <body>
@@ -1011,7 +1026,7 @@
       </div>
       <div class="carousel-slide">
         <div class="carousel-photo" data-label="Add runway show photo">
-          <img src="fashion-design-institute-guwahati-gift-runway-showcase.jpg.jpeg" alt="Runway Showcase by students of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+          <img src="11.jpg.jpeg" alt="Runway Showcase by students of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
         </div>
         <p class="carousel-caption">Annual graduate runway showcase</p>
       </div>
@@ -1028,20 +1043,28 @@
         <p class="carousel-caption">Pattern making</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
-        <div class="carousel-photo" data-label="Add fashion studio photo"></div>
-        <p class="carousel-caption">Draping studio, second-year cohort</p>
+        <div class="carousel-photo" data-label="Add fashion studio photo">
+          <img src="brand visit.jpeg" alt="Students of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati going for a brand visit">
+        </div>
+        <p class="carousel-caption">Brand Visit</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
-        <div class="carousel-photo" data-label="Add runway show photo"></div>
-        <p class="carousel-caption">Annual graduate runway showcase</p>
+        <div class="carousel-photo" data-label="Add runway show photo">
+          <img src="Surface Devlopment.jpg.jpeg" alt="Surface Development class taken as part of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
+        <p class="carousel-caption">Surface Development Class</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
-        <div class="carousel-photo" data-label="Add textile lab photo"></div>
-        <p class="carousel-caption">Textile and print development lab</p>
+        <div class="carousel-photo" data-label="Add textile lab photo">
+          <img src="FD Set design for photoshoot B.jpg.jpeg" alt="Set Design activity taken as part of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
+        <p class="carousel-caption">Set Designing for photoshoot</p>
       </div>
       <div class="carousel-slide" aria-hidden="true">
-        <div class="carousel-photo" data-label="Add pattern cutting photo"></div>
-        <p class="carousel-caption">Pattern cutting masterclass</p>
+        <div class="carousel-photo" data-label="Add pattern cutting photo">
+          <img src="Circular & Recycle Fashion.jpg.jpeg" alt="Recycling materials to design dresses, an activity done as part of BDes Fashion & Textile Design at Guwahati Institute of Fashion Technology (GIFT), Guwahati">
+        </div>
+        <p class="carousel-caption">Circular and recycled Fashion</p>
       </div>
     </div>
   </div>
@@ -1124,52 +1147,66 @@
   <div class="marquee">
     <div class="marquee-track">
       <div class="testi-slide">
-        <p class="testi-quote">"The studio hours mattered more than any textbook — by third year I already had a portfolio I was proud to show."</p>
+        <p class="testi-quote">"Choosing GIFT was a game-changer for me! Their unique and advanced training methodology equipped me with the skills and confidence to excel. Thrilled to kickstart my career as an AI Fashion Prompter at Caimeera, Mumbai!"</p>
         <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><b>Ananya R.</b><span>Fashion Designing, Batch of 2025</span></div>
+          <div class="testi-avatar">
+            <img src="PHURPA-WANGMO.jpg" alt="" class="testi-avatar">
+          </div>
+          <div><b>Phurpa Wangmo.</b><span>Fashion Designing, Batch of 2025</span></div>
         </div>
       </div>
       <div class="testi-slide">
-        <p class="testi-quote">"Working on a live client brief in second year changed how I think about design — it's not theoretical anymore."</p>
+        <p class="testi-quote">"GIFT ignited my passion for design and gave me the tools to turn it into a thriving career! Now, as a Junior Interior Designer at Livspace, I'm creating spaces people love.   If you're serious about pursuing your career in interior design, then GIFT is your launchpad!"</p>
         <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><b>Rehan K.</b><span>Interior Designing, Batch of 2024</span></div>
+          <div class="testi-avatar">
+            <img src="david.jpg" alt="" class="testi-avatar">
+          </div>
+          <div><b>David Kharia</b><span>Interior Designing, Batch of 2024</span></div>
         </div>
       </div>
       <div class="testi-slide">
-        <p class="testi-quote">"Small batches meant the faculty actually knew my work. The critiques were tough but that's exactly what I needed."</p>
+        <p class="testi-quote">"GIFT was the turning point in my journey as a fashion designer and entrepreneur. Today, as the proud owner of QUAD’S K, Shillong, I owe my success to the strong foundation built at GIFT - this is where your journey begins!"</p>
         <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><b>Priya M.</b><span>Textile & Surface Design, Batch of 2025</span></div>
+          <div class="testi-avatar">
+            <img src="iba.jpeg" alt="" class="testi-avatar">
+          </div>
+          <div><b>IBADHAUN M KHYRIEM.</b><span>Textile & Surface Design, Batch of 2025</span></div>
         </div>
       </div>
       <div class="testi-slide">
-        <p class="testi-quote">"The runway showcase got my final collection in front of two local labels. I had a job before graduation."</p>
+        <p class="testi-quote">"From passion to profession! GIFT nurtured my creative spirit and equipped me with the skills to excel as a Textile Designer.  I'm now living my dream at Econic Clothing LLP,  Guwahati.  Thanks to GIFT from the core of my heart"</p>
         <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><b>Devansh T.</b><span>Fashion Designing, Batch of 2023</span></div>
+          <div class="testi-avatar">
+            <img src="LEISHANG.jpg" alt="" class="testi-avatar">
+          </div>
+          <div><b>Leishang Martha Chanu</b><span>Fashion Designing, Batch of 2023</span></div>
         </div>
       </div>
       <div class="testi-slide" aria-hidden="true">
-        <p class="testi-quote">"The studio hours mattered more than any textbook — by third year I already had a portfolio I was proud to show."</p>
+        <p class="testi-quote">"GIFT empowered me to make a real impact in the fashion world!  Thanks to their incredible program, I'm now thriving at Mahura Weaves.  GIFT doesn't just teach fashion; they ignite passion and build careers!"</p>
         <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><b>Ananya R.</b><span>Fashion Designing, Batch of 2025</span></div>
+          <div class="testi-avatar">
+            <img src="TANNU.jpg" alt="" class="=testi-avatar">
+          </div>
+          <div><b>Tanu Pandit</b><span>Fashion Designing, Batch of 2025</span></div>
         </div>
       </div>
       <div class="testi-slide" aria-hidden="true">
-        <p class="testi-quote">"Working on a live client brief in second year changed how I think about design — it's not theoretical anymore."</p>
+        <p class="testi-quote">"GIFT provided the foundation for my success. Thanks to their guidance, I'm now an established Interior & Landscape Designer with my own firm, Vastavik: The Design Den"</p>
         <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><b>Rehan K.</b><span>Interior Designing, Batch of 2024</span></div>
+          <div class="testi-avatar">
+            <img src="RAMAVTAR.jpg" alt="" class="testi-avatar">
+          </div>
+          <div><b>RAM AVTAR MODI</b><span>Interior Designing, Batch of 2016</span></div>
         </div>
       </div>
       <div class="testi-slide" aria-hidden="true">
-        <p class="testi-quote">"Small batches meant the faculty actually knew my work. The critiques were tough but that's exactly what I needed."</p>
+        <p class="testi-quote">"GIFT was the launchpad for my dreams. The hands-on learning, expert faculty, and creative environment gave me the confidence to start my own boutique <strong>"SHAJON"</strong>. GIFT is perfect place to turn passion into a profession!"</p>
         <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><b>Priya M.</b><span>Textile & Surface Design, Batch of 2025</span></div>
+          <div class="testi-avatar">
+            <img src="bora.jpeg" alt="" class="testi-avatar">
+          </div>
+          <div><b>Sukanya Bora</b><span>Textile & Surface Design, Batch of 2025</span></div>
         </div>
       </div>
       <div class="testi-slide" aria-hidden="true">
